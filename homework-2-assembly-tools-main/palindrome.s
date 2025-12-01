@@ -1,6 +1,6 @@
-# Declares palindrome as a global symbol so that the main.c file can call it.
-# Following line of code is required so that the linker can work. 
-.globl palindrome
+.globl palindrome        # Declares palindrome as a global symbol so that the main.c file can call it.
+                         # Following line of code is required so that the linker can work. 
+
 
 # MIPS Assembly  Language
 #
@@ -15,9 +15,6 @@
 # "palindrome" is the label for the function entry point.
 # When main.c calls palindrome the execution begins from this point on.
 
-# palindrome:             #
-#  addi $v0, $zero, -1   # Sets "$v0" to -1. --> [add 0 + -1]
-#  jr $ra                # Jump register return address --> [exits the function & goes back to C test harness]
 
 
 palindrome: 
