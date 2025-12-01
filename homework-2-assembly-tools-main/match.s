@@ -27,6 +27,7 @@
 match: 
     beq $a0, $zero, return_zero      # branch to "return_zero" if $a0 == $zero ... else continue instructions 
     blt $a2, $a0, return_neg1        # branch to "return_neg1" if $a2 < $a0 ... else continue instructions
+    beq $a2, $zero, return_neg1      # if haystack is empty BUT pattern is not, return -1
 
     move $t0, $zero                  # moves $zero value into $t0 giving us ---> $t0 = 0
 
