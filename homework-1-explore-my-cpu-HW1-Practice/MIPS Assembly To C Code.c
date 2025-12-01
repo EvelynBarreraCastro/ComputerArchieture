@@ -1,3 +1,5 @@
+// Code translation from MIPS to C Code example so you can run
+
 #include <stdio.h>
 
         int main () {
