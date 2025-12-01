@@ -29,7 +29,7 @@ palindrome:                           # If length < 2 (0 or 1), it's palindrome 
     addi $t2, $a0, -1                 # (right) $t2 = -1  --> [use $t2 for last index of string]
 
 
-# loop_compared function created.
+# loop_compared function created. Main loop that checks if pointers have crossed. 
 # GOAL: The main 2 pointer loop, in where we will be comparing characters left & right and move inward.
 loop_compare: 
                                       # if left >= right we've checked everything making it a palindrome. 
@@ -52,12 +52,12 @@ loop_compare:
    addi $t2, $t2, -1                  # $t2 = $t2 + -1 --> right-- (decrements right) (move right pointer left)
    j loop_compare                     # repeats the loop_compare function 
 
-# pal_true function created. 
+# Return true (palindrome found)
 pal_true: 
   addi $v0, $zero, 1              # $v0 = 1 (true) satisfies palindrome
   jr $ra                          # jump register & return argument --> [exits function & returns argument v0]
 
-# pal_false function created. 
+# Return false (not a palindrome) 
 pal_false: 
   move $v0, $zero                 # $v0 = 0 (false) doesn't satisfy the palindrome rule
   jr $ra                          # jump register & return arguement --> [exits function & returns argument v0]
